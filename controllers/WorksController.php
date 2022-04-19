@@ -89,13 +89,20 @@
         public function actionShedule(){
 
             $worksList = [];
-
-            if(isset($_POST["week"])){
-                $worksList = Works::getSheduleByWeek($_POST["week"]);
-            }else{
-                $worksList = Works::getShedule();
+            if(isset($_POST["SheduleSubm"])){
+               // print_r($_POST);
+                $id = $_POST["SheduleSubm"];
+                $week = $_POST["week"];
+                $priority = $_POST["priority"];
+                $result = Works::updShedule($id, $week, $priority);
             }
 
+                if(isset($_POST["week"])){
+                    $worksList = Works::getSheduleByWeek($_POST["week"]);
+                }else{
+                    $worksList = Works::getShedule();
+                }
+            
             require_once (ROOT."/views/works/shedule.php");
             return true;
         }

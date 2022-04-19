@@ -45,7 +45,7 @@
             while($row = $result->fetch()){
                 $worksList[$i]["id"]=$row["id"];
                 $worksList[$i]["week"]=$row["week"];
-                $worksList[$i]["Priority"]=$row["Priority"];
+                $worksList[$i]["Priority"]=$row["priority"];
                 $worksList[$i]["work_name"]=$row["work_name"];
                 $worksList[$i]["rl_cnc_date"]=$row["rl_cnc_date"];
                 $worksList[$i]["rl_cnc_prod"]=$row["rl_cnc_prod"];
@@ -74,7 +74,7 @@
             while($row = $result->fetch()){
                 $worksList[$i]["id"]=$row["id"];
                 $worksList[$i]["week"]=$row["week"];
-                $worksList[$i]["Priority"]=$row["Priority"];
+                $worksList[$i]["Priority"]=$row["priority"];
                 $worksList[$i]["work_name"]=$row["work_name"];
                 $worksList[$i]["rl_cnc_date"]=$row["rl_cnc_date"];
                 $worksList[$i]["rl_cnc_prod"]=$row["rl_cnc_prod"];
@@ -135,7 +135,18 @@
             return $result->execute();
         }
 
+        public static function updShedule ($id, $week, $priority){
+            $db = Db::getConnection();
 
+            $sql = "UPDATE work SET week = :week, priority = :priority  WHERE id = :id";
+            //$sql = "UPDATE work SET work_name = :work WHERE id = :id";
+
+            $result = $db->prepare($sql);
+            $result -> bindParam(":id", $id, PDO::PARAM_INT);
+            $result -> bindParam(":week", $week, PDO::PARAM_STR);
+            $result -> bindParam(":priority", $priority, PDO::PARAM_STR);
+            return $result->execute();
+        }
 
 
 

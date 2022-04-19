@@ -8,6 +8,11 @@
         <p> после цнц и упаковки сделать доступ к элементам меню в зависимости от группы допуска</p>
         <p> на случай прямого открытия в случае несоответствующего аккаунта выводить предупреждение</p>
 
+    <h3> 1.3.1 </h3><br>
+        <p>Date: 19.04.2022 <p><br>
+        <p>Added the ability to change the week and order in the schedule menu<p><br>
+        
+
     <h3> 1.3.0 </h3><br>
         <p>Date: 18.04.2022 <p><br>
         <p>Checking an empty name field or duplicates names in work input<p><br>
