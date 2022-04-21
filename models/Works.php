@@ -148,6 +148,20 @@
             return $result->execute();
         }
 
+        public static function updCnc ($id, $rl, $st, $hr, $oth){
+            $db = Db::getConnection();
+
+            $sql = "UPDATE work SET rl_cnc_prod = :rl, st_cnc_prod = :st, hr_cnc_prod = :hr, cnc_other_prod = :oth WHERE id = :id";
+           
+            $result = $db->prepare($sql);
+            $result -> bindParam(":id", $id, PDO::PARAM_INT);
+            $result -> bindParam(":rl", $rl, PDO::PARAM_STR);
+            $result -> bindParam(":st", $st, PDO::PARAM_STR);
+            $result -> bindParam(":hr", $hr, PDO::PARAM_STR);
+            $result -> bindParam(":oth", $oth, PDO::PARAM_STR);
+            return $result->execute();
+        }
+
 
 
 
