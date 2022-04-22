@@ -1,10 +1,14 @@
-<h2>Version describe:</h2><br>
+
+    <h2>Hello, this is a Tahti Production System. It allows you to keep a record of work and change data from different workplaces.</h2>
+    <p>Below is a list of versions and changes:</p>
 
 
+   <!-- <h3> Will be released at next time: </h3><br>
+        <p> Not now</p> -->
 
-    <h3> Will be released at next time: </h3><br>
-        <p> после цнц и сделать доступ к элементам меню в зависимости от группы допуска</p>
-        <p> на случай прямого открытия в случае несоответствующего аккаунта выводить предупреждение</p>
+    <h3> 1.3.3 </h3><br>
+        <p>Date: 22.04.2022 <p><br>
+        <p>Implemented access and selection of sections by categories of workers.<p><br>
 
     <h3> 1.3.2 </h3><br>
         <p>Date: 21.04.2022 <p><br>
@@ -23,8 +27,8 @@
     
     <h3> 1.2.1 </h3><br>
         <p>Date: 6.04.2022 <p><br>
-        <p>Choose works shedule by week<p><br>
-        <p>New field in works shedule<p><br>
+        <p>Choose works schedule by week<p><br>
+        <p>New field in works schedule<p><br>
 
     <h3> 1.2.0 </h3><br>
         <p>Date: 4.04.2022 <p><br>
@@ -40,5 +44,5 @@
     <h3> 1.0.0 </h3><br>
         <p>Date: 20.03.2022 <p><br>
         <p>Fisrt simple template of graphical interface<p><br>
-        <p>DB of shedule, products and worker<p><br>
+        <p>DB of schedule, products and worker<p><br>
 

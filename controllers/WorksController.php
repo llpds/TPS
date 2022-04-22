@@ -6,7 +6,7 @@
     class WorksController{
 
         public function actionList(){
-            $userId = User::checkLogged();
+            $userId = User::loggedItr();
             
             $worksList = [];
             $worksList = Works::getWorksList();
@@ -25,6 +25,8 @@
         }
 
         public function actionInput(){
+            $userId = User::loggedItr();
+
             $errors = null;
             $worksNameList = [];
             $worksNameList = Works::getWorksNameList();
@@ -53,6 +55,8 @@
         }
 
         public function actionEdit(){
+            $userId = User::loggedItr();
+
             $errors = null;
             $saveErrors = null;
             $saveStatus = null;
@@ -86,24 +90,25 @@
             return true;
         }
 
-        public function actionShedule(){
+        public function actionSchedule(){
+            $userId = User::loggedItr();
 
             $worksList = [];
-            if(isset($_POST["SheduleSubm"])){
+            if(isset($_POST["ScheduleSubm"])){
                // print_r($_POST);
-                $id = $_POST["SheduleSubm"];
+                $id = $_POST["ScheduleSubm"];
                 $week = $_POST["week"];
                 $priority = $_POST["priority"];
-                $result = Works::updShedule($id, $week, $priority);
+                $result = Works::updSchedule($id, $week, $priority);
             }
 
                 if(isset($_POST["week"])){
-                    $worksList = Works::getSheduleByWeek($_POST["week"]);
+                    $worksList = Works::getScheduleByWeek($_POST["week"]);
                 }else{
-                    $worksList = Works::getShedule();
+                    $worksList = Works::getSchedule();
                 }
             
-            require_once (ROOT."/views/works/shedule.php");
+            require_once (ROOT."/views/works/schedule.php");
             return true;
         }
 

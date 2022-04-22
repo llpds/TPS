@@ -21,7 +21,7 @@ class UserController{
                 $errors [] = "Invalid login credentials.";
             } else {
                 User::auth($userInf);
-                header("Location: /works/");
+                header("Location: /");
             }
         }
 
@@ -29,9 +29,14 @@ class UserController{
     }
     
 
+    public function actionDenied(){
+        require_once ROOT."/views/user/denied.php";
+    }
+
     public function actionLogout(){
         session_start();
-        unset($_SESSION["user"]);
+        //unset($_SESSION["user"]);
+        unset($_SESSION["user"], $_SESSION["name"], $_SESSION["access"]);
         header("Location: /");
     }
 

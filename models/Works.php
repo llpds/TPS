@@ -37,7 +37,7 @@
         }
 
 
-        public static function getShedule(){
+        public static function getSchedule(){
             $db = Db::getConnection();
             $result = $db->query("SELECT * FROM work ORDER by week, Priority");
 
@@ -60,7 +60,7 @@
         }
 
 
-        public static function getSheduleByWeek($week){
+        public static function getScheduleByWeek($week){
             //$worksList = [];
             $week = intval($week);
 
@@ -135,7 +135,7 @@
             return $result->execute();
         }
 
-        public static function updShedule ($id, $week, $priority){
+        public static function updSchedule ($id, $week, $priority){
             $db = Db::getConnection();
 
             $sql = "UPDATE work SET week = :week, priority = :priority  WHERE id = :id";

@@ -12,10 +12,11 @@ return array (//возвращаем в файле массив позже бу�
     "cnc" => "cnc/schedule",
     "input" => "works/input",
     "edit" => "works/edit",
-    "shedule" => "works/shedule",
+    "schedule" => "works/schedule",
     "works" => "works/list",
     "user/login" => "user/login",
     "user/logout" => "user/logout",
+    "user/denied" => "user/denied",
     "([A-z,.,0-9]+)" => "site/greet",
     "" => "site/greet"   //вызов метод actionIndex в контроллере NewsController
 

@@ -20,11 +20,16 @@
                 </div>
 
                     <ul class="nav">
-                        <li><a href="/works">Works</a></li>
-                        <li><a href="/input">Works input</a></li>
-                        <li><a href="/edit">Works edit</a></li>
-                        <li><a href="/shedule">Works shedule</a></li>
-                        <li><a href="/cnc">CNC</a></li>
+                        <?php if(User::isItr()):?>
+                            <li><a href="/works">Works</a></li>
+                            <li><a href="/input">Works input</a></li>
+                            <li><a href="/edit">Works edit</a></li>
+                            <li><a href="/schedule">Works schedule</a></li>
+                            <li><a href="/cnc">CNC</a></li>
+                        <?php endif; ?>
+                        <?php if(User::isCnc()):?>
+                            <li><a href="/cnc">CNC</a></li>
+                        <?php endif; ?>
                 <!--        <li><a href="/">Workers shedule</a></li> -->
                         <li><a href="/">About</a></li>
                         <?php if(User::isGuest()): ?>

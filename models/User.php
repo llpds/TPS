@@ -33,12 +33,43 @@
             header("Location: /user/login");
         }
 
+        public static function loggedCnc(){
+            if($_SESSION["access"] == "itr" or $_SESSION["access"] == "cnc"){
+                return $_SESSION["access"];
+            }
+            header("Location: /user/denied");
+        }
+
+        public static function loggedItr(){
+            if($_SESSION["access"] == "itr"){
+                return $_SESSION["access"];
+            }
+            header("Location: /user/denied");
+        }
+
         public static function isGuest(){
 
             if(isset($_SESSION["user"])){
                 return false;
             }
             return true;
+        }
+
+        public static function isItr(){
+
+            if(isset($_SESSION["access"]) && $_SESSION["access"] == "itr"){
+                return true;
+            }
+            return false;
+        }
+
+        
+        public static function isCnc(){
+
+            if(isset($_SESSION["access"]) && $_SESSION["access"]  == "cnc"){
+                return true;
+            }
+            return false;
         }
     }
 ?>

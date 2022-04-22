@@ -4,6 +4,8 @@
 
     class CncController{
         public function ActionSchedule(){
+            $userId = User::loggedCnc();
+
             $worksList = [];
             $week = date("W");
             
@@ -17,7 +19,7 @@
                 $result = Works::updCnc($id, $rl, $st, $hr, $oth);
             }
 
-            $worksList = Works::getSheduleByWeek($week);
+            $worksList = Works::getScheduleByWeek($week);
             
             require_once (ROOT."/views/cnc/schedule.php");
             return true;
