@@ -44,7 +44,7 @@
     <?php
     else:?>
         <form method ="POST" action="">
-            <input name ="work" type="text" list="worksNameList" />
+            <input name ="work" type="text" list="worksNameList" autocomplete = "off"/>
             <button type="submit"> Search by name </button>
             <datalist id = "worksNameList">
                 <?php

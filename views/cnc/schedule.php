@@ -15,7 +15,7 @@
             <tr>
                 <form action="" method ="POST">
                     <td><p><?php echo $work["week"]; ?></p></td>
-                    <td><p><?php echo $work["Priority"]; ?></p></td>
+                    <td><p><?php echo $work["priority"]; ?></p></td>
                     <td><h4><?php echo $work["work_name"]; ?></h4></td>
                     <td><p><input name = "rl_cnc_prod" type = "text" value = '<?php echo $work["rl_cnc_prod"]; ?>'/></p></td>
                     <td><p><input name = "st_cnc_prod" type = "text" value = '<?php echo $work["st_cnc_prod"]; ?>' /></p></td>

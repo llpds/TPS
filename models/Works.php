@@ -39,13 +39,13 @@
 
         public static function getSchedule(){
             $db = Db::getConnection();
-            $result = $db->query("SELECT * FROM work ORDER by week, Priority");
+            $result = $db->query("SELECT * FROM work ORDER by week, priority");
 
             $i = 0;
             while($row = $result->fetch()){
                 $worksList[$i]["id"]=$row["id"];
                 $worksList[$i]["week"]=$row["week"];
-                $worksList[$i]["Priority"]=$row["priority"];
+                $worksList[$i]["priority"]=$row["priority"];
                 $worksList[$i]["work_name"]=$row["work_name"];
                 $worksList[$i]["rl_cnc_date"]=$row["rl_cnc_date"];
                 $worksList[$i]["rl_cnc_prod"]=$row["rl_cnc_prod"];
@@ -61,12 +61,12 @@
 
 
         public static function getScheduleByWeek($week){
-            //$worksList = [];
+            $worksList = [];
             $week = intval($week);
 
             $db = Db::getConnection();
 
-            $sql = "SELECT * FROM work  WHERE week = $week ORDER by week, Priority";
+            $sql = "SELECT * FROM work  WHERE week = $week ORDER by week, priority";
             $result = $db->query($sql);
 
 
@@ -74,7 +74,7 @@
             while($row = $result->fetch()){
                 $worksList[$i]["id"]=$row["id"];
                 $worksList[$i]["week"]=$row["week"];
-                $worksList[$i]["Priority"]=$row["priority"];
+                $worksList[$i]["priority"]=$row["priority"];
                 $worksList[$i]["work_name"]=$row["work_name"];
                 $worksList[$i]["rl_cnc_date"]=$row["rl_cnc_date"];
                 $worksList[$i]["rl_cnc_prod"]=$row["rl_cnc_prod"];

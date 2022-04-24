@@ -6,6 +6,11 @@
    <!-- <h3> Will be released at next time: </h3><br>
         <p> Not now</p> -->
 
+    <h3> 1.3.4</h3><br>
+        <p>Date: 24.04.2022</p><br>
+        <p>fixed errors: differences in section and database title, duplicated session commands, fill in work schedule</p><br>
+
+
     <h3> 1.3.3 </h3><br>
         <p>Date: 22.04.2022 <p><br>
         <p>Implemented access and selection of sections by categories of workers.<p><br>
