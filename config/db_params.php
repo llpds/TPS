@@ -2,9 +2,9 @@
 
 return array(
     "host" => "localhost",
-    "dbname" => "tahtip",//llpaulds_tahtip
+    "dbname" => "",
     "user" => "root",
-    "password" => "",//%nb7&iyC
+    "password" => "",
 );
 
 
