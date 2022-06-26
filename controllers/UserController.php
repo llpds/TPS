@@ -26,16 +26,19 @@ class UserController{
         }
 
         require_once ROOT."/views/user/login.php";
+        return true;
     }
     
 
     public function actionDenied(){
         require_once ROOT."/views/user/denied.php";
+        return true;
     }
 
     public function actionLogout(){
         unset($_SESSION["user"], $_SESSION["name"], $_SESSION["access"]);
         header("Location: /");
+        return true;
     }
 
 

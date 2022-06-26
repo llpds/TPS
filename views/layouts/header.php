@@ -33,9 +33,9 @@
                 <!--        <li><a href="/">Workers shedule</a></li> -->
                         <li><a href="/">About</a></li>
                         <?php if(User::isGuest()): ?>
-                            <li><a href="/user/login">Login</a></li>
+                            <li><a href="/login">Login</a></li>
                         <?php else: ?>   
-                            <li><a href="/user/logout">Logout</a></li>
+                            <li><a href="/logout">Logout</a></li>
                         <?php endif; ?>
                     </ul>
             </div><!--/header_content-->

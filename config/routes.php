@@ -14,9 +14,9 @@ return array (//возвращаем в файле массив позже бу�
     "edit" => "works/edit",
     "schedule" => "works/schedule",
     "works" => "works/list",
-    "user/login" => "user/login",
-    "user/logout" => "user/logout",
-    "user/denied" => "user/denied",
+    "login" => "user/login",
+    "logout" => "user/logout",
+    "denied" => "user/denied",
     "([A-z,.,0-9]+)" => "site/greet",
     "" => "site/greet"   //вызов метод actionIndex в контроллере NewsController
 
