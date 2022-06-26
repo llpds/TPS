@@ -30,21 +30,21 @@
                 return $_SESSION["user"];
             }
 
-            header("Location: /user/login");
+            header("Location: /login");
         }
 
         public static function loggedCnc(){
-            if($_SESSION["access"] == "itr" or $_SESSION["access"] == "cnc"){
+            if(isset($_SESSION["access"]) && ($_SESSION["access"] == "itr" or $_SESSION["access"] == "cnc")){
                 return $_SESSION["access"];
             }
-            header("Location: /user/denied");
+            header("Location: /denied");
         }
 
         public static function loggedItr(){
-            if($_SESSION["access"] == "itr"){
+            if(isset($_SESSION["access"]) && $_SESSION["access"] == "itr"){
                 return $_SESSION["access"];
             }
-            header("Location: /user/denied");
+            header("Location: /denied");
         }
 
         public static function isGuest(){

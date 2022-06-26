@@ -5,6 +5,10 @@
 
    <!-- <h3> Will be released at next time: </h3><br>
         <p> Not now</p> -->
+        
+    <h3> 1.3.5</h3><br>
+        <p>Date: 26.06.2022</p><br>
+        <p> fixed errors: direct access to parts of the site</p><br>
 
     <h3> 1.3.4</h3><br>
         <p>Date: 24.04.2022</p><br>
