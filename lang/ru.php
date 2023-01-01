@@ -1,0 +1,50 @@
+<?php
+    return array(
+        'nav' => [
+            'works' => 'Список',
+            'workInput' => 'Нов. заказ',
+            'workEdit' => 'Правка',
+            'workSchedule' => 'График',
+            'cnc' => 'ЧПУ',
+            'files' => 'Файлы',
+            'about' => 'О сайте',
+            'draw' => 'Чертить',
+            'logout' => 'Выйти',
+            'login' => 'Войти',
+        ],
+        'table' =>[
+            'id' => 'Номер',
+            'week' => 'Неделя',
+            'priority' => 'Порядок',
+            'workName' => 'Название',
+            'stepsCnc' => 'Ступени',
+            'rlCnc' => 'Рейсиланку',
+            'stMaterial' => 'Материал ступеней',
+            'rlMaterial' => 'Материал рейсиланку',
+            'hrMaterial' => 'Материал поручней',
+            'handrailsCnc' => 'Поручни',
+            'other' => 'Прочее',
+            'saveChanges' => 'Сохранить',
+            'name' => 'Имя',
+            'password' => 'Пароль',
+        ],
+        'button' => [
+            'searchByName' => 'Поиск по имени',
+            'searchByWeek' => 'Поиск по номеру недели',
+            'search' => 'Поиск',
+            'save' => 'Сохранить',
+            'login' => 'Войти',
+        ],
+        'msg' => [
+            'newWorkSaved' => 'Новый заказ сохранен!',
+            'login' => 'Кто ты, странник?',
+            'notAccess' => "У вас нет прав доступа.",
+        ],
+        'draw' => [
+            'startX' => 'Начало по X',
+            'startY' => 'Начало по Y',
+            'endX' => 'Конец по X',
+            'endY' => 'Конец по Y',
+            'deep' => 'Глубина',
+        ]
+    );

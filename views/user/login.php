@@ -5,13 +5,13 @@
         foreach ($errors as $err){
             echo "<p>".$err."</p>";
         }
-    } else echo "<p>Hello wayfarer, who are you?</p>";
+    } else echo "<p>".$lang['msg']['login']."</p>";
 ?>
     
     <form action="#" method="post">
-        <input name="name" type="text" value="Name"/>
-        <input name="password" type="password" value="Password"/>
-        <button name="submit" type="submit" > Login </button>
+        <input name="name" type="text" value="<?php echo $lang['table']['name'];?>"/>
+        <input name="password" type="password" value="<?php echo $lang['table']['password'];?>"/>
+        <button name="submit" type="submit" > <?php echo $lang['button']['login'];?> </button>
     </form>
 
 

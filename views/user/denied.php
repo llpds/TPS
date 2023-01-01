@@ -2,7 +2,7 @@
 
 
 
-<p>You don't have access.</p>
+<p><?php echo $lang['msg']['notAccess'];?></p>
 
 
 

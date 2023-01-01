@@ -4,8 +4,8 @@
         private $routes;
 
         public function __construct(){
-            $routesPath = ROOT."/config/routes.php";
-            $this->routes = include ($routesPath);
+            $this->routes = include (ROOT."/config/routes.php");
+        //    $lang = include(ROOT."/lang/en.php");
         }
 
 
@@ -32,7 +32,7 @@
 
                         if (file_exists($controller)) include_once($controller);
 
-
+                        
                         $object = new $controllerName;
                         $result = call_user_func_array(array($object, $actionName), $segments);
 

@@ -34,14 +34,21 @@
         }
 
         public static function loggedCnc(){
-            if(isset($_SESSION["access"]) && ($_SESSION["access"] == "itr" or $_SESSION["access"] == "cnc")){
+            if(isset($_SESSION["access"]) && ($_SESSION["access"] == "itr" or $_SESSION["access"] == ("cnc" or "admin"))){
                 return $_SESSION["access"];
             }
             header("Location: /denied");
         }
 
         public static function loggedItr(){
-            if(isset($_SESSION["access"]) && $_SESSION["access"] == "itr"){
+            if(isset($_SESSION["access"]) && $_SESSION["access"] == ("itr" or "admin")){
+                return $_SESSION["access"];
+            }
+            header("Location: /denied");
+        }
+
+        public static function loggedAdmin(){
+            if(isset($_SESSION["access"]) && $_SESSION["access"] == "admin"){
                 return $_SESSION["access"];
             }
             header("Location: /denied");
@@ -67,6 +74,14 @@
         public static function isCnc(){
 
             if(isset($_SESSION["access"]) && $_SESSION["access"]  == "cnc"){
+                return true;
+            }
+            return false;
+        }
+
+        public static function isAdmin(){
+
+            if(isset($_SESSION["access"]) && $_SESSION["access"]  == "admin"){
                 return true;
             }
             return false;

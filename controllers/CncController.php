@@ -10,7 +10,7 @@
             $week = date("W");
             
             if(isset($_POST["Cnc"])){
-                //print_r($_POST);
+
                 $id = $_POST["Cnc"];
                 $rl = $_POST["rl_cnc_prod"];
                 $st = $_POST["st_cnc_prod"];

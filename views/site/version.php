@@ -5,6 +5,18 @@
 
    <!-- <h3> Will be released at next time: </h3><br>
         <p> Not now</p> -->
+    
+    <h3>1.4.2</h3><br>
+        <p>Date: 26.12.2022</p><br>
+        <p>New drawing section, wich prepare cutting propram for old CNC machine.</p><br>
+    
+    <h3>1.4.1</h3><br>
+        <p>Date: 22.12.2022</p><br>
+        <p>user status display</p><br>
+    
+    <h3>1.4</h3><br>
+        <p>Date: 20.12.2022</p><br>
+        <p>Switching languages based on configuration files</p><br>
         
     <h3> 1.3.5</h3><br>
         <p>Date: 26.06.2022</p><br>

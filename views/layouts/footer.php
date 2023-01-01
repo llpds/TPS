@@ -2,7 +2,7 @@
            </div> <!-- /content -->
         <div class="footer"><!--Footer-->
 
-              <p>&copy Tahti Productiion System v 1.3.5 by llpds </p>
+              <p>&copy Tahti Production System v 1.4.2 by llpds </p>
 
         </div><!--/Footer-->
         </div>

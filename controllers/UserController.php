@@ -6,6 +6,7 @@ class UserController{
 
 
     public function actionLogin(){
+        if(isset($_SESSION['lang'])) $err = include_once (ROOT."/lang/".$_SESSION['lang']."Errors.php");
         $name = "";
         $password = "";
 
@@ -18,7 +19,7 @@ class UserController{
             $userInf = User::checkUserData($name, $password);
 
             if ($userInf == false){
-                $errors [] = "Invalid login credentials.";
+                $errors [] =  $err['wrongAuth'];
             } else {
                 User::auth($userInf);
                 header("Location: /");

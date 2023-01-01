@@ -1,9 +1,10 @@
 <?php
     include_once (ROOT."/models/Works.php");
     include_once (ROOT."/models/User.php");
+   
 
 
-    class WorksController{
+    class WorksController{       
 
         public function actionList(){
             $userId = User::loggedItr();
@@ -25,6 +26,7 @@
         }
 
         public function actionInput(){
+            $err = include_once (ROOT."/lang/".$_SESSION['lang']."Errors.php");
             $userId = User::loggedItr();
 
             $errors = null;
@@ -36,7 +38,7 @@
                             
                 if ($name != null){
                     if(in_array($name,$worksNameList)){
-                        $errors [] = "This name is used for other work.";
+                        $errors [] = $err['busyName'];
                     }else{
                             $week = $_POST["week"];
                             $rl = $_POST["rlMaterial"];
@@ -45,7 +47,7 @@
                             $result = Works::input($name, $week, $rl, $st, $hr);
                     }
                 } else{
-                    $errors [] = "Name of work can not be empty.";
+                    $errors [] = $err['emptyName'];
                 }    
             }
 
@@ -55,6 +57,7 @@
         }
 
         public function actionEdit(){
+            $err = include_once (ROOT."/lang/".$_SESSION['lang']."Errors.php");
             $userId = User::loggedItr();
 
             $errors = null;
@@ -70,7 +73,7 @@
                     $worksItem = Works::getWorkByName($worksName);
                     //$name = "";
                 } else {
-                    $errors [] = "Select the name of an existing work. NAME: ".$worksName." is not in the database";
+                    $errors [] = $err['selectExistingName'].$worksName.$err['notInDB'];
                 }
             }
 

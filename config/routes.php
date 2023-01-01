@@ -17,11 +17,10 @@ return array (//возвращаем в файле массив позже бу�
     "login" => "user/login",
     "logout" => "user/logout",
     "denied" => "user/denied",
+    "files" => "files/index",
+    "draw" => "draw/index",
+    "langchng/([a-z]+)" => "lang/change/$1",
     "([A-z,.,0-9]+)" => "site/greet",
-    "" => "site/greet"   //вызов метод actionIndex в контроллере NewsController
-
+    "" => "site/greet"
     );
-
-
-
 ?>

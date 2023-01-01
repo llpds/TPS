@@ -5,7 +5,7 @@
     class SiteController {
 
         public function actionGreet(){
-            require_once ROOT."/views/site/index.php";
+            require_once ROOT."/views/site/about.php";
             return true;
         }
     }
