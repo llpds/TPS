@@ -1,12 +1,12 @@
 <?php
     return array(
         'nav' => [
-            'works' => 'List',
-            'workInput' => 'Work input',
-            'workEdit' => 'Work edit',
-            'workSchedule' => 'Work schedule',
+            'works' => 'Lista',
+            'workInput' => 'Uusi',
+            'workEdit' => 'Muokkaus',
+            'workSchedule' => 'Kuvio',
             'cnc' => 'CNC',
-            'files' => 'Files',
+            'files' => 'Tiedostot',
             'about' => 'About',
             'draw' => 'Draw',
             'logout' => 'Logout',

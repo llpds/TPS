@@ -5,6 +5,10 @@
 
    <!-- <h3> Will be released at next time: </h3><br>
         <p> Not now</p> -->
+
+    <h3>1.4.3</h3><br>
+        <p>Date: 1.1.2023</p><br>
+        <p>Display of parts material for cnc</p><br>
     
     <h3>1.4.2</h3><br>
         <p>Date: 26.12.2022</p><br>

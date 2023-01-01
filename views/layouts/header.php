@@ -55,7 +55,7 @@
 
                         <?php endif; ?>
                         <?php if(User::isCnc()):?>
-                            <li>Admin: <?php echo $_SESSION['name']; ?></li>
+                            <li>Cnc: <?php echo $_SESSION['name']; ?></li>
                             <li><a href="/cnc"><?php echo $lang['nav']['cnc'];?></a></li>
                         <?php endif; ?>
                 <!--        <li><a href="/">Workers shedule</a></li> -->

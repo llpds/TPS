@@ -83,6 +83,9 @@
                 $worksList[$i]["hr_cnc_date"]=$row["hr_cnc_date"];
                 $worksList[$i]["hr_cnc_prod"]=$row["hr_cnc_prod"];
                 $worksList[$i]["cnc_other_prod"]=$row["cnc_other_prod"];
+                $worksList[$i]["st_material"]=$row["st_material_type"];
+                $worksList[$i]["rl_material"]=$row["rl_material_type"];
+                $worksList[$i]["hr_material"]=$row["hr_material_type"];
 
                 $i++;
             }
