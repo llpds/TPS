@@ -1,21 +1,65 @@
 <?php
     class User{
         
+        public static function getAll(){
+            $db = Db::getConnection();
+            $result = $db->query("SELECT * FROM workers");
+
+            $i = 0;
+            while($row = $result->fetch()){
+                $usersList[$i]["id"]=$row["workers_id"];
+                $usersList[$i]["name"]=$row["name"];
+                $usersList[$i]["access"]=$row["access"];
+
+                $i++;
+            }
+            return $usersList;
+        }
+
+        public static function store($name, $access, $password_hash, $status){
+            $db = Db::getConnection();
+
+            $sql = "INSERT INTO workers (name, access, password, status) VALUES (:name, :access, :password_hash, :status)";
+
+            $result = $db->prepare($sql);
+            $result -> bindParam(":name", $name, PDO::PARAM_STR);
+            $result -> bindParam(":access", $access, PDO::PARAM_STR);
+            $result -> bindParam(":password_hash", $password_hash, PDO::PARAM_STR);
+            $result -> bindParam(":status", $status, PDO::PARAM_STR);
+
+            return $result->execute();
+        }
+
         public static function checkUserData($name, $password){
             $db = Db::getConnection();
 
-            $sql = "SELECT * FROM workers WHERE name = :name AND password = :password";
-
-            $result = $db->prepare($sql);
-            $result->bindParam(":name", $name, PDO::PARAM_STR);
-            $result->bindParam(":password", $password, PDO::PARAM_STR);
-            $result->execute();
-
-            $user = $result->fetch();
+            //$sql = "SELECT * FROM workers WHERE name = :name AND password = :password";
+            $sql = "SELECT * FROM workers WHERE name = :name";
+            
+            $query = $db->prepare($sql);
+            $query->bindParam(":name", $name, PDO::PARAM_STR);
+            //$result->bindParam(":password", $password, PDO::PARAM_STR);
+            $query->execute();
+            $result = $query->fetch(PDO::FETCH_ASSOC);
+            //$user = $result->fetch();
+            
+            if (!$result) {
+                return false;    
+            } else {
+                if (password_verify($password, $result['password'])) {
+                    return [$result["workers_id"],$result["access"],$result["name"]];
+                } else {
+                    return false;  
+                }
+            }
+    
+            
+            /*
             if($user){
                 return [$user["workers_id"],$user["access"],$user["name"]];
             }
             return false;
+            */
         }
 
         public static function auth($userInf){

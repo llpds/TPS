@@ -1,6 +1,7 @@
 <?php
     return array(
         'nav' => [
+            'user' => 'Сотрудник',
             'works' => 'Список',
             'workInput' => 'Нов. заказ',
             'workEdit' => 'Правка',
@@ -27,8 +28,17 @@
             'saveChanges' => 'Сохранить',
             'name' => 'Имя',
             'password' => 'Пароль',
+            'worker' => 'Сотрудник',
+            'access' => 'Позиция',
+            'action' => 'Действие',
+        ],
+        'label' => [
+            'new worker' => 'Новый сотрудник'
         ],
         'button' => [
+            'new' => 'Новый',
+            'edit' => 'Изменить',
+            'delete' => 'Удалить',
             'searchByName' => 'Поиск по имени',
             'searchByWeek' => 'Поиск по номеру недели',
             'search' => 'Поиск',

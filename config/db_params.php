@@ -5,6 +5,4 @@ return array(
     "user" => "root",
     "password" => "",
 );
-
-
 ?>

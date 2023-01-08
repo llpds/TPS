@@ -1,6 +1,7 @@
 <?php
     return array(
         'nav' => [
+            'user' => 'Worker',
             'works' => 'List',
             'workInput' => 'Work input',
             'workEdit' => 'Work edit',
@@ -27,8 +28,17 @@
             'saveChanges' => 'Save',
             'name' => 'Name',
             'password' => 'Password',
+            'worker' => 'Worker',
+            'access' => 'Position',
+            'action' => 'Action',
+        ],
+        'label' => [
+            'new worker' => 'New worker'
         ],
         'button' => [
+            'new' => 'New',
+            'edit' => 'Edit',
+            'delete' => 'Delete',
             'searchByName' => 'Search by name',
             'searchByWeek' => 'Search by week',
             'search' => 'Search',

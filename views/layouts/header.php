@@ -37,7 +37,7 @@
                     <ul class="nav">
                         <?php if(User::isItr()):?>
                             <li>Itr: <?php echo $_SESSION['name']; ?></li>
-                            <li><a href="/works"><?php echo $lang['nav']['works'];?></a></li>
+                            <li><a href="/user/list"><?php echo $lang['nav']['user'];?></a></li>
                             <li><a href="/input"><?php echo $lang['nav']['workInput'];?></a></li>
                             <li><a href="/edit"><?php echo $lang['nav']['workEdit'];?></a></li>
                             <li><a href="/schedule"><?php echo $lang['nav']['workSchedule'];?></a></li>
@@ -46,7 +46,7 @@
                         <?php endif; ?>
                         <?php if(User::isAdmin()):?>
                             <li>Admin: <?php echo $_SESSION['name']; ?></li>
-                            <li><a href="/works"><?php echo $lang['nav']['works'];?></a></li>
+                            <li><a href="/user/list"><?php echo $lang['nav']['user'];?></a></li>
                             <li><a href="/input"><?php echo $lang['nav']['workInput'];?></a></li>
                             <li><a href="/edit"><?php echo $lang['nav']['workEdit'];?></a></li>
                             <li><a href="/schedule"><?php echo $lang['nav']['workSchedule'];?></a></li>

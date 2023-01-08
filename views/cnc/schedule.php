@@ -1,7 +1,6 @@
 <?php include (ROOT."/views/layouts/header.php");?>
     <table class="bordered">
         <tr>
-            <th><h3> <?php echo $lang['table']['week'];?> </h3></th>
             <th><h3> <?php echo $lang['table']['priority'];?> </h3></th>
             <th><h3> <?php echo $lang['table']['workName'];?> </h3></th>
             <th><h3> <?php echo $lang['table']['stepsCnc'];?> </h3></th>
@@ -14,7 +13,6 @@
         <?php foreach ($worksList as $work): ?>
             <tr>
                 <form action="" method ="POST">
-                    <td><p><?php echo $work["week"]; ?></p></td>
                     <td><p><?php echo $work["priority"]; ?></p></td>
                     <td><h4><?php echo $work["work_name"]; ?></h4></td>
                     <td>
